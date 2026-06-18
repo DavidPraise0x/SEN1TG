@@ -80,31 +80,51 @@ export default function AboutPage({ aboutImage }) {
             <div className="glass-panel" style={{
               padding: '16px',
               borderRadius: '18px',
+              overflow: 'hidden',
             }}>
-              <img
-                src={aboutImage || "/sent1g_about_abstract.png"}
-                alt="SEN1TG abstract sonic geometry"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  borderRadius: '6px',
-                  filter: 'brightness(102%)',
-                  transition: 'var(--transition-smooth)'
-                }}
-                className="about-portrait"
-              />
+              <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+                <img
+                  src={aboutImage || "/sent1g_about_photo.jpg"}
+                  alt="SEN1TG Profile Portrait"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    borderRadius: '8px',
+                    filter: 'contrast(1.05) brightness(0.95) saturate(1.1)',
+                    transition: 'var(--transition-smooth)',
+                  }}
+                  className="about-portrait"
+                />
+                {/* Vignette and Dark Theme Blend Overlays */}
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'linear-gradient(to top, rgba(7, 6, 18, 0.75) 0%, rgba(7, 6, 18, 0.1) 40%, transparent 70%), radial-gradient(circle, transparent 30%, rgba(7, 6, 18, 0.45) 100%)',
+                  pointerEvents: 'none',
+                }} />
+                {/* Neon Cyan Ambient Glow Border */}
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  border: '1px solid rgba(0, 229, 255, 0.15)',
+                  borderRadius: '8px',
+                  pointerEvents: 'none',
+                }} />
+              </div>
             </div>
             {/* Minimal subtitle label underneath portrait */}
             <div style={{
               marginTop: '20px',
-              fontFamily: 'var(--font-serif)',
-              fontStyle: 'italic',
-              fontSize: '0.9rem',
-              color: 'var(--text-muted)',
+              fontFamily: 'var(--font-sans)',
+              letterSpacing: '1px',
+              fontWeight: 600,
+              fontSize: '0.8rem',
+              color: 'var(--text-secondary)',
               textAlign: 'center',
+              textTransform: 'uppercase',
             }}>
-              SEN1TG — Abstract Sonic Architecture.
+              SEN1TG // Godswill Asadu
             </div>
           </div>
 

@@ -137,7 +137,7 @@ export default function App() {
     return localStorage.getItem('sen1tg_hero_image') || localStorage.getItem('sent1g_hero_image') || '/sent1g_hero_abstract.png';
   });
   const [aboutImage, setAboutImage] = useState(() => {
-    return localStorage.getItem('sen1tg_about_image') || localStorage.getItem('sent1g_about_image') || '/sent1g_about_abstract.png';
+    return localStorage.getItem('sen1tg_about_image') || localStorage.getItem('sent1g_about_image') || '/sent1g_about_photo.jpg';
   });
 
   const handleSaveStudioData = (updatedTracks, newHero, newAbout) => {
@@ -603,9 +603,9 @@ export default function App() {
               className="studio-input" 
               value={aboutImage}
               onChange={(e) => setAboutImage(e.target.value)}
-              placeholder="/sent1g_about_abstract.png"
+              placeholder="/sent1g_about_photo.jpg"
             />
-            <span className="studio-input-hint">Default: /sent1g_about_abstract.png</span>
+            <span className="studio-input-hint">Default: /sent1g_about_photo.jpg</span>
           </div>
 
           <h4 style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '1.5px', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px', marginTop: '20px', textTransform: 'uppercase' }}>
