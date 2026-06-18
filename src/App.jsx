@@ -72,7 +72,6 @@ const DEFAULT_TRACKS = [
     src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
     cover: '/cover_give_it.png',
     audiomack: 'https://audiomack.com/godswillasadu/song/give-it',
-    spotify: 'https://open.spotify.com/artist/2465npzdlzftbttabvjvga',
     apple: 'https://music.apple.com/us/artist/sen1tg/1798544976'
   },
   {
@@ -83,7 +82,6 @@ const DEFAULT_TRACKS = [
     src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
     cover: '/cover_the_change.png',
     audiomack: 'https://audiomack.com/godswillasadu/song/the-change',
-    spotify: 'https://open.spotify.com/artist/2465npzdlzftbttabvjvga',
     apple: 'https://music.apple.com/us/artist/sen1tg/1798544976'
   },
 ];
@@ -102,6 +100,12 @@ export default function App() {
               cover: '/cover_world.webp',
               spotify: 'https://open.spotify.com/track/0Zz3OfeOJKK2mjKh7T3zUF?si=xCOPKZGBSYCRY2emC5WlxA&context=spotify%3Aplaylist%3A37i9dQZF1E8PbaXj1nQ8nu',
               apple: 'https://music.apple.com/ng/album/world-single/6780094087'
+            };
+          }
+          if (t.title === 'GIVE IT' || t.title === 'THE CHANGE') {
+            return {
+              ...t,
+              spotify: null
             };
           }
           return t;
