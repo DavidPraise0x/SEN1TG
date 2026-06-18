@@ -229,8 +229,8 @@ export default function App() {
           <div className="container" style={{ position: 'relative', zIndex: 10 }}>
             <div className="bento-container">
               
-              {/* Tile 1: Hero Text & Identity (Spans 2 cols) */}
-              <div className="bento-card bento-col-span-2 glass-panel hero-animate-1" style={{ padding: '60px 45px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px', textAlign: 'left' }}>
+              {/* Tile 1: Hero Text & Identity (Spans 3 cols) */}
+              <div className="bento-card bento-col-span-3 glass-panel hero-animate-1" style={{ padding: '60px 45px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px', textAlign: 'left' }}>
                 <span style={{
                   fontSize: '0.75rem',
                   fontFamily: 'var(--font-sans)',
@@ -280,25 +280,6 @@ export default function App() {
                   >
                     BOOKINGS <Mail size={14} />
                   </button>
-                </div>
-              </div>
-
-              {/* Tile 2: Framed Portrait (Spans 1 col) */}
-              <div className="bento-card bento-col-span-1 glass-panel hero-animate-2" style={{ padding: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ overflow: 'hidden', borderRadius: '12px', width: '100%', height: '100%', minHeight: '320px' }}>
-                  <img 
-                    src={heroImage} 
-                    alt="SEN1TG Abstract Sonic artwork" 
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                      filter: 'none',
-                      transition: 'var(--transition-smooth)',
-                    }}
-                    className="hero-image-portrait"
-                  />
                 </div>
               </div>
 

@@ -66,9 +66,21 @@ body {
   position: relative;
 }
 
-
-
-/* Custom Scrollbar */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/music_watermark.png'), url('/music_watermark.png');
+  background-size: 800px, 1400px;
+  background-position: 0 0, 300px 400px;
+  background-repeat: repeat;
+  opacity: 0.55; /* Brighter watermark */
+  z-index: -1;
+  pointer-events: none;
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
