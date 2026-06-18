@@ -240,7 +240,7 @@ export default function App() {
                   textTransform: 'uppercase',
                   display: 'block',
                 }}>
-                  // MUSIC PRODUCER & SOUND DESIGNER //
+                  // ARTIST //
                 </span>
                 
                 <h1 style={{
